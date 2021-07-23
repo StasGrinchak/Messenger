@@ -1,0 +1,24 @@
+<body>
+<div class="container">
+    <div class="form">
+        <form action="" method="post">{% csrf_token %}
+            {% if error %}
+                <div class="error_wrap"><p class="error">{{ error }}</p></div>
+            {% endif %}
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="input">
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <div class="btn">
+                <button type="submit" class="login_btn">Войти</button>
+            </div>
+            <div class="perm_link">
+                <p>У вас нету аккаунта? <a href="{% url 'register' %}">Регистрация</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

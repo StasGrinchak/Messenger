@@ -1,0 +1,6 @@
+{% block title %}Добро пожаловать{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловaть {{ new_user.first_name }}!</h1>
+    <p>Вы успешно зарегистрировались.Теперь вы можете перейти <a href="{% url "home" %}">На Главную</a>.</p>
+{% endblock %}
